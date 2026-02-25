@@ -1,0 +1,33 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "backend",
+	"main": "src/index.ts",
+	"compatibility_date": "2026-02-25",
+	"r2_buckets": [
+		{
+			"binding": "BUCKET",
+			"bucket_name": "whisk-files",
+		},
+	],
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "whisk-db",
+			"database_id": "29c70f72-93aa-468b-a901-4635df185f70",
+		},
+	],
+	"durable_objects": {
+		"bindings": [
+			{
+				"name": "FILE_MANAGER",
+				"class_name": "FileManager",
+			},
+		],
+	},
+	"migrations": [
+		{
+			"tag": "v1",
+			"new_classes": ["FileManager"],
+		},
+	],
+}
