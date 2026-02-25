@@ -1,0 +1,22 @@
+{
+	"name": "whisk",
+	"module": "index.ts",
+	"type": "module",
+	"private": true,
+	"workspaces": [
+		"packages/*",
+		"backend",
+		"frontend"
+	],
+	"scripts": {
+		"dev": "bun --filter \"*\" dev",
+		"deploy:api": "bun --filter backend deploy",
+		"deploy:web": "bun --filter frontend deploy"
+	},
+	"devDependencies": {
+		"@types/bun": "latest"
+	},
+	"peerDependencies": {
+		"typescript": "^5"
+	}
+}
