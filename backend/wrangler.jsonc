@@ -1,8 +1,12 @@
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
-	"name": "backend",
+	"name": "whisk-backend",
 	"main": "src/index.ts",
 	"compatibility_date": "2026-02-25",
+
+	"vars": {
+		"ENVIRONMENT": "production",
+	},
 	"r2_buckets": [
 		{
 			"binding": "BUCKET",
@@ -22,12 +26,27 @@
 				"name": "FILE_MANAGER",
 				"class_name": "FileManager",
 			},
+			{
+				"name": "RATE_LIMITER",
+				"class_name": "RateLimiter",
+			},
 		],
 	},
 	"migrations": [
 		{
 			"tag": "v1",
-			"new_classes": ["FileManager"],
+			"new_sqlite_classes": ["FileManager"],
+		},
+		{
+			"tag": "v2",
+			"new_sqlite_classes": ["RateLimiter"],
+		},
+	],
+
+	"routes": [
+		{
+			"pattern": "api.whisk.codemeoww.com",
+			"custom_domain": true,
 		},
 	],
 }

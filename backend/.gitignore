@@ -31,3 +31,8 @@ lerna-debug.log*
 
 # misc
 .DS_Store
+
+*.js
+*.d.ts
+*.d.ts.map
+.wrangler/

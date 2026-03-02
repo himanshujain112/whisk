@@ -1,6 +1,6 @@
 import { DurableObject } from "cloudflare:workers";
-import { EXPIRY_TIME } from "../../packages/shared/constants";
-import { Bindings } from "./index";
+import { EXPIRY_TIME } from "shared";
+import type { Bindings } from "./index";
 
 export class FileManager extends DurableObject<Bindings> {
 	constructor(ctx: DurableObjectState, env: Bindings) {
