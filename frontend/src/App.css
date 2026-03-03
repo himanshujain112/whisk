@@ -596,12 +596,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1.25rem;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.25rem;
   padding: 0.9rem 1.5rem;
   border-top: 1px solid var(--border-subtle);
   background: rgba(8,8,8,0.6);
   backdrop-filter: blur(12px);
 }
+
+.footer-row {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.footer-dot--desktop { display: block; }
 
 .footer-link {
   display: flex; align-items: center; gap: 5px;
@@ -706,7 +715,14 @@
 
   .feat-pill { font-size: 0.68rem; padding: 4px 9px; }
 
-  .footer { gap: 0.75rem; padding: 0.75rem 1rem; font-size: 0.7rem; }
+  .footer {
+    gap: 0.45rem 0.75rem;
+    padding: 0.75rem 1rem;
+    font-size: 0.7rem;
+    flex-direction: column;
+  }
+  .footer-row { gap: 0.75rem; }
+  .footer-dot--desktop { display: none; }
 
   .toast { font-size: 0.78rem; padding: 10px 16px; white-space: normal; text-align: center; justify-content: center; border-radius: 16px; }
 }
