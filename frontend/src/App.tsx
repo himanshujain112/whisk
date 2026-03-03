@@ -427,17 +427,29 @@ export default function App() {
       </main>
 
       <footer className="footer">
-        <a href="https://codemeoww.com" target="_blank" rel="noreferrer" className="footer-link">
-          <ArrowUpRight /> codemeoww.com
-        </a>
-        <div className="footer-dot" />
-        <a href="https://x.com/codemeoww" target="_blank" rel="noreferrer" className="footer-link">
-          <XIcon /> @codemeoww
-        </a>
-        <div className="footer-dot" />
-        <a href="https://github.com/himanshujain112/whisk" target="_blank" rel="noreferrer" className="footer-link">
-          <GithubIcon size={12} /> GitHub
-        </a>
+        <div className="footer-row">
+          <a href="https://codemeoww.com" target="_blank" rel="noreferrer" className="footer-link">
+            <ArrowUpRight /> codemeoww.com
+          </a>
+          <div className="footer-dot" />
+          <a href="https://x.com/codemeoww" target="_blank" rel="noreferrer" className="footer-link">
+            <XIcon /> @codemeoww
+          </a>
+          <div className="footer-dot" />
+          <a href="https://github.com/himanshujain112/whisk" target="_blank" rel="noreferrer" className="footer-link">
+            <GithubIcon size={12} /> GitHub
+          </a>
+        </div>
+        <div className="footer-dot footer-dot--desktop" />
+        <div className="footer-row">
+          <a href="https://www.codemeoww.com/products/whisk/privacy" target="_blank" rel="noreferrer" className="footer-link">
+            Privacy
+          </a>
+          <div className="footer-dot" />
+          <a href="https://www.codemeoww.com/#contact" target="_blank" rel="noreferrer" className="footer-link">
+            Contact
+          </a>
+        </div>
       </footer>
 
       <Toast msg={toast.msg} kind={toast.kind} visible={toast.visible} />
